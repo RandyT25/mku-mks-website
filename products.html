@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | MKU & MKS</title>
+  <meta name="description" content="Browse sample product categories and portfolio items from MKU and MKS. Pricing remains account-based and can be connected later with Firebase.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container"><div class="header-row"><a class="brand" href="index.html"><span class="brand-mark"></span><span class="brand-text"><strong>MKU & MKS</strong><span>Food & beverage distribution group</span></span></a><div class="nav-wrap"><nav class="site-nav"><a href="index.html" data-nav-link>Home</a><a href="about.html" data-nav-link>About</a><a href="products.html" data-nav-link>Products</a><a href="brands.html" data-nav-link>Brands</a><a href="industries.html" data-nav-link>Industries</a><a href="logistics.html" data-nav-link>Logistics</a><a href="contact.html" data-nav-link>Contact</a></nav><div class="header-ctas"><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div><button class="mobile-toggle" type="button" aria-expanded="false" data-mobile-toggle>☰</button></div></div><div class="mobile-panel" data-mobile-panel><div class="mobile-links"><a class="btn btn-outline" href="index.html">Home</a><a class="btn btn-outline" href="about.html">About</a><a class="btn btn-outline" href="products.html">Products</a><a class="btn btn-outline" href="brands.html">Brands</a><a class="btn btn-outline" href="industries.html">Industries</a><a class="btn btn-outline" href="logistics.html">Logistics</a><a class="btn btn-outline" href="contact.html">Contact</a><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div></div></div></header>
+<main>
+  <section class="page-hero"><div class="container"><div class="page-hero-shell"><div class="kicker-row">Product portal preview</div><h1>Static catalog now. Firebase-ready ordering later.</h1><p>This page gives you a usable product browsing experience today without inventing pricing. When you are ready, we can connect login, customer pricing, and order requests.</p></div></div></section>
+
+  <section class="page-section tight"><div class="container">
+    <div class="filter-bar">
+      <div class="filter-group">
+        <button class="small-btn primary" type="button" data-filter="all">All</button>
+        <button class="small-btn" type="button" data-filter="bakery">Bakery & Flour</button>
+        <button class="small-btn" type="button" data-filter="beverage">Beverage</button>
+        <button class="small-btn" type="button" data-filter="alcohol">Alcohol</button>
+        <button class="small-btn" type="button" data-filter="dairy">Dairy</button>
+      </div>
+      <div class="filter-group">
+        <input class="search-input" type="search" placeholder="Search product or brand" aria-label="Search products" data-product-search>
+      </div>
+      <span class="small-copy">Demo catalog only · no live stock or pricing yet</span>
+    </div>
+
+    <div class="product-grid" data-product-grid>
+      <article class="product-card" data-category="bakery" data-search="japanese tempura flour bakery mku">
+        <div class="product-top"><span class="product-category">Bakery & Flour</span><span class="sku">SKU · TEMP-220</span></div>
+        <h3>Japanese Tempura 220 g</h3>
+        <p>Category sample based on the current MKU flour listing. Useful as a lightweight card format for a future live catalog.</p>
+        <div class="product-meta"><span class="meta-pill">MKU</span><span class="meta-pill">Pack 220 g</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="request-account.html">Request Account</a></div>
+      </article>
+
+      <article class="product-card" data-category="bakery" data-search="crispy ala kentucky 220g flour bakery mku">
+        <div class="product-top"><span class="product-category">Bakery & Flour</span><span class="sku">SKU · CRK-220</span></div>
+        <h3>Crispy Ala Kentucky 220 g</h3>
+        <p>Sample product-card layout for consumer-sized flour and mix products within the bakery category.</p>
+        <div class="product-meta"><span class="meta-pill">MKU</span><span class="meta-pill">Pack 220 g</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="contact.html">Inquire</a></div>
+      </article>
+
+      <article class="product-card" data-category="bakery" data-search="crispy ala kentucky 1kg flour bakery mku">
+        <div class="product-top"><span class="product-category">Bakery & Flour</span><span class="sku">SKU · CRK-1KG</span></div>
+        <h3>Crispy Ala Kentucky 1 kg</h3>
+        <p>Larger-pack product presentation for foodservice and repeat-order customers.</p>
+        <div class="product-meta"><span class="meta-pill">MKU</span><span class="meta-pill">Pack 1 kg</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="request-account.html">Open Account</a></div>
+      </article>
+
+      <article class="product-card" data-category="beverage" data-search="nescafe classic sachet beverage nestle professional">
+        <div class="product-top"><span class="product-category">Beverage</span><span class="sku">SKU · NES-CLS</span></div>
+        <h3>Nescafé Classic Sachet</h3>
+        <p>Representative beverage item for hospitality and pantry programs, based on the current MKU product listing.</p>
+        <div class="product-meta"><span class="meta-pill">Nestlé Professional</span><span class="meta-pill">Coffee</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="contact.html">Ask Sales</a></div>
+      </article>
+
+      <article class="product-card" data-category="bakery" data-search="easy mix sriboga bakery flour">
+        <div class="product-top"><span class="product-category">Bakery & Flour</span><span class="sku">SKU · EMX-001</span></div>
+        <h3>Easy Mix</h3>
+        <p>Featured as a brand-aligned sample product entry for bakery-oriented accounts and repeat buyers.</p>
+        <div class="product-meta"><span class="meta-pill">Sriboga</span><span class="meta-pill">Easy Mix</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="brands.html">View Brand</a></div>
+      </article>
+
+      <article class="product-card" data-category="alcohol" data-search="remy martin xo alcohol beverage bar">
+        <div class="product-top"><span class="product-category">Alcohol</span><span class="sku">SKU · ALC-RMXO</span></div>
+        <h3>Remy Martin XO</h3>
+        <p>Alcohol portfolio card based on the current MKU alcohol listing, suitable for hospitality-bar category presentation.</p>
+        <div class="product-meta"><span class="meta-pill">Bar program</span><span class="meta-pill">Imported</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="contact.html">Check Availability</a></div>
+      </article>
+
+      <article class="product-card" data-category="alcohol" data-search="fashion vodka alcohol beverage bar">
+        <div class="product-top"><span class="product-category">Alcohol</span><span class="sku">SKU · ALC-FVOD</span></div>
+        <h3>Fashion Vodka</h3>
+        <p>Static-card example showing how beverage and bar products can fit inside the future portal design.</p>
+        <div class="product-meta"><span class="meta-pill">Bar program</span><span class="meta-pill">Hospitality</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="request-account.html">Request Access</a></div>
+      </article>
+
+      <article class="product-card" data-category="alcohol" data-search="green grape chamisul beverage alcohol">
+        <div class="product-top"><span class="product-category">Alcohol</span><span class="sku">SKU · ALC-GGRP</span></div>
+        <h3>Green Grape</h3>
+        <p>Flavor-variant card example for a cleaner product archive and easier search filtering later.</p>
+        <div class="product-meta"><span class="meta-pill">Variant</span><span class="meta-pill">Alcohol</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="contact.html">Ask Sales</a></div>
+      </article>
+
+      <article class="product-card" data-category="alcohol" data-search="chamisul original fresh alcohol soju beverage">
+        <div class="product-top"><span class="product-category">Alcohol</span><span class="sku">SKU · ALC-CHM</span></div>
+        <h3>Chamisul Original</h3>
+        <p>Example alcohol category card for trade buyers and hospitality beverage teams.</p>
+        <div class="product-meta"><span class="meta-pill">Hospitality</span><span class="meta-pill">Beverage</span></div>
+        <div class="product-actions"><a class="small-btn primary" href="login.html">Login for Price</a><a class="small-btn" href="request-account.html">Request Access</a></div>
+      </article>
+    </div>
+
+    <div class="empty-state hidden" data-empty-state>
+      <h3>No products match this filter yet.</h3>
+      <p>Try another keyword or reset to all categories.</p>
+    </div>
+  </div></section>
+
+  <section class="page-section alt"><div class="container"><div class="portal-panel"><div><span class="eyebrow" style="color:#fff;">Portal logic</span><h2 class="section-title" style="color:#fff;max-width:12ch;">Keep pricing private and customer-specific.</h2><p>You said customers should be able to see products, see price, and maybe order online. The best B2B path is account-based pricing after login instead of public prices for everyone.</p><ul class="portal-list"><li>Public catalog for browsing and inquiry</li><li>Customer login for pricing visibility</li><li>Order request or cart flow after Firebase integration</li></ul></div><div class="portal-actions"><a class="btn btn-light" href="login.html">Portal Login</a><a class="btn btn-accent" href="request-account.html">Request Business Account</a></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-row"><p>© <span data-year></span> MKU & MKS. Static website trial built for GitHub hosting.</p><div class="footer-links"><a href="about.html">About</a><a href="products.html">Products</a><a href="brands.html">Brands</a><a href="industries.html">Industries</a><a href="logistics.html">Logistics</a><a href="contact.html">Contact</a></div></div></div></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

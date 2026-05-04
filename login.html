@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login | MKU & MKS</title>
+  <meta name="description" content="Customer portal login preview for MKU and MKS. Static for now, ready for Firebase Authentication later.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container"><div class="header-row"><a class="brand" href="index.html"><span class="brand-mark"></span><span class="brand-text"><strong>MKU & MKS</strong><span>Food & beverage distribution group</span></span></a><div class="nav-wrap"><nav class="site-nav"><a href="index.html" data-nav-link>Home</a><a href="about.html" data-nav-link>About</a><a href="products.html" data-nav-link>Products</a><a href="brands.html" data-nav-link>Brands</a><a href="industries.html" data-nav-link>Industries</a><a href="logistics.html" data-nav-link>Logistics</a><a href="contact.html" data-nav-link>Contact</a></nav><div class="header-ctas"><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div><button class="mobile-toggle" type="button" aria-expanded="false" data-mobile-toggle>☰</button></div></div><div class="mobile-panel" data-mobile-panel><div class="mobile-links"><a class="btn btn-outline" href="index.html">Home</a><a class="btn btn-outline" href="about.html">About</a><a class="btn btn-outline" href="products.html">Products</a><a class="btn btn-outline" href="brands.html">Brands</a><a class="btn btn-outline" href="industries.html">Industries</a><a class="btn btn-outline" href="logistics.html">Logistics</a><a class="btn btn-outline" href="contact.html">Contact</a><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div></div></div></header>
+<main>
+  <section class="page-hero"><div class="container"><div class="page-hero-shell"><div class="kicker-row">Customer portal</div><h1>Portal login preview for account-based pricing and ordering.</h1><p>This page is intentionally static for GitHub hosting. We can connect it to Firebase Authentication later without redesigning the UI.</p></div></div></section>
+  <section class="page-section tight"><div class="container"><div class="two-col">
+    <form class="login-card stack-18" data-demo-form>
+      <div><span class="eyebrow">Login</span><h3>Business customer sign in</h3><p>Use this UI now for preview and GitHub trial. Later it can connect to Firebase email login or approved customer accounts.</p></div>
+      <div class="field-full"><label for="login-email">Business email</label><input id="login-email" type="email" required></div>
+      <div class="field-full"><label for="login-password">Password</label><input id="login-password" type="password" required></div>
+      <button class="btn btn-primary full" type="submit">Sign In</button>
+      <button class="btn btn-outline full" type="button" data-demo-login>Run Demo Login</button>
+      <div class="form-status" data-form-status></div>
+      <div class="small-copy" data-login-status></div>
+      <div class="feature-meta"><span class="meta-pill">Firebase Auth later</span><span class="meta-pill">Account pricing later</span></div>
+    </form>
+    <div class="stack-18">
+      <article class="portal-preview-card"><span class="eyebrow">What customers will see</span><h3>Portal modules</h3><ul class="list-check"><li>Customer-specific product pricing</li><li>Catalog and brand browsing</li><li>Quick reorder and order request</li><li>Favorites and account support</li></ul></article>
+      <div class="portal-preview-grid">
+        <article class="portal-preview-card"><div class="badge-number">01</div><h3>My Pricing</h3><p>Private prices after login, not public-facing.</p></article>
+        <article class="portal-preview-card"><div class="badge-number">02</div><h3>Quick Order</h3><p>Fast add-to-cart or order-request flow.</p></article>
+        <article class="portal-preview-card"><div class="badge-number">03</div><h3>Favorites</h3><p>Shortcuts for common repeat products.</p></article>
+        <article class="portal-preview-card"><div class="badge-number">04</div><h3>Order History</h3><p>Useful once Firebase data and accounts are live.</p></article>
+      </div>
+    </div>
+  </div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-row"><p>© <span data-year></span> MKU & MKS. Static website trial built for GitHub hosting.</p><div class="footer-links"><a href="about.html">About</a><a href="products.html">Products</a><a href="brands.html">Brands</a><a href="industries.html">Industries</a><a href="logistics.html">Logistics</a><a href="contact.html">Contact</a></div></div></div></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
