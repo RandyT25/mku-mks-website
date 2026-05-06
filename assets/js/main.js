@@ -42,7 +42,7 @@ function setupDemoForms() {
       const submitButton = form.querySelector('button[type="submit"]');
       if (submitButton) submitButton.disabled = true;
       if (status) {
-        status.textContent = 'Thanks — this static demo captured your request locally. We can connect this form to Firebase next.';
+        status.textContent = 'Thank you. Your request has been captured in this website preview.';
       }
       form.reset();
       setTimeout(() => {
@@ -55,10 +55,20 @@ function setupDemoForms() {
 function setupDemoLogin() {
   const demoButton = document.querySelector('[data-demo-login]');
   const status = document.querySelector('[data-login-status]');
-  if (!demoButton || !status) return;
+  const loginShell = document.querySelector('[data-login-shell]');
+  const loggedOut = loginShell?.querySelector('[data-auth-stage="loggedout"]');
+  const loggedIn = document.querySelector('[data-auth-stage="loggedin"]');
+  if (!demoButton || !loginShell || !loggedIn) return;
 
   demoButton.addEventListener('click', () => {
-    status.textContent = 'Portal demo mode enabled. Next step: connect Firebase Auth and customer-specific pricing visibility.';
+    if (status) {
+      status.textContent = 'Signed in successfully. Dashboard preview is now shown below.';
+    }
+    if (loggedOut) loggedOut.classList.add('hidden');
+    loggedIn.classList.remove('hidden');
+    setTimeout(() => {
+      loggedIn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
   });
 }
 
