@@ -4,39 +4,238 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Login | MKU & MKS</title>
-  <meta name="description" content="Customer portal login preview for MKU and MKS. Static for now, ready for Firebase Authentication later.">
+  <meta name="description" content="Customer login showcase for MKU and MKS with a realistic account sign-in view, dashboard preview, and representative pricing.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<header class="site-header"><div class="container"><div class="header-row"><a class="brand" href="index.html"><span class="brand-mark"></span><span class="brand-text"><strong>MKU & MKS</strong><span>Food & beverage distribution group</span></span></a><div class="nav-wrap"><nav class="site-nav"><a href="index.html" data-nav-link>Home</a><a href="about.html" data-nav-link>About</a><a href="products.html" data-nav-link>Products</a><a href="brands.html" data-nav-link>Brands</a><a href="industries.html" data-nav-link>Industries</a><a href="logistics.html" data-nav-link>Logistics</a><a href="contact.html" data-nav-link>Contact</a></nav><div class="header-ctas"><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div><button class="mobile-toggle" type="button" aria-expanded="false" data-mobile-toggle>☰</button></div></div><div class="mobile-panel" data-mobile-panel><div class="mobile-links"><a class="btn btn-outline" href="index.html">Home</a><a class="btn btn-outline" href="about.html">About</a><a class="btn btn-outline" href="products.html">Products</a><a class="btn btn-outline" href="brands.html">Brands</a><a class="btn btn-outline" href="industries.html">Industries</a><a class="btn btn-outline" href="logistics.html">Logistics</a><a class="btn btn-outline" href="contact.html">Contact</a><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div></div></div></header>
-<main>
-  <section class="page-hero"><div class="container"><div class="page-hero-shell"><div class="kicker-row">Customer portal</div><h1>Portal login preview for account-based pricing and ordering.</h1><p>This page is intentionally static for GitHub hosting. We can connect it to Firebase Authentication later without redesigning the UI.</p></div></div></section>
-  <section class="page-section tight"><div class="container"><div class="two-col">
-    <form class="login-card stack-18" data-demo-form>
-      <div><span class="eyebrow">Login</span><h3>Business customer sign in</h3><p>Use this UI now for preview and GitHub trial. Later it can connect to Firebase email login or approved customer accounts.</p></div>
-      <div class="field-full"><label for="login-email">Business email</label><input id="login-email" type="email" required></div>
-      <div class="field-full"><label for="login-password">Password</label><input id="login-password" type="password" required></div>
-      <button class="btn btn-primary full" type="submit">Sign In</button>
-      <button class="btn btn-outline full" type="button" data-demo-login>Run Demo Login</button>
-      <div class="form-status" data-form-status></div>
-      <div class="small-copy" data-login-status></div>
-      <div class="feature-meta"><span class="meta-pill">Firebase Auth later</span><span class="meta-pill">Account pricing later</span></div>
-    </form>
-    <div class="stack-18">
-      <article class="portal-preview-card"><span class="eyebrow">What customers will see</span><h3>Portal modules</h3><ul class="list-check"><li>Customer-specific product pricing</li><li>Catalog and brand browsing</li><li>Quick reorder and order request</li><li>Favorites and account support</li></ul></article>
-      <div class="portal-preview-grid">
-        <article class="portal-preview-card"><div class="badge-number">01</div><h3>My Pricing</h3><p>Private prices after login, not public-facing.</p></article>
-        <article class="portal-preview-card"><div class="badge-number">02</div><h3>Quick Order</h3><p>Fast add-to-cart or order-request flow.</p></article>
-        <article class="portal-preview-card"><div class="badge-number">03</div><h3>Favorites</h3><p>Shortcuts for common repeat products.</p></article>
-        <article class="portal-preview-card"><div class="badge-number">04</div><h3>Order History</h3><p>Useful once Firebase data and accounts are live.</p></article>
+<header class="site-header">
+  <div class="container">
+    <div class="header-row">
+      <a class="brand" href="index.html" aria-label="MKU and MKS home">
+        <span class="brand-mark"></span>
+        <span class="brand-text"><strong>MKU & MKS</strong><span>Customer portal</span></span>
+      </a>
+      <div class="nav-wrap">
+        <nav class="site-nav">
+          <a href="index.html" data-nav-link>Home</a>
+          <a href="about.html" data-nav-link>About</a>
+          <a href="products.html" data-nav-link>Products</a>
+          <a href="brands.html" data-nav-link>Brands</a>
+          <a href="industries.html" data-nav-link>Industries</a>
+          <a href="logistics.html" data-nav-link>Logistics</a>
+          <a href="contact.html" data-nav-link>Contact</a>
+        </nav>
+        <div class="header-ctas">
+          <a class="btn btn-outline" href="products.html">Back to Products</a>
+          <a class="btn btn-accent" href="request-account.html">Request Account</a>
+        </div>
+        <button class="mobile-toggle" type="button" aria-expanded="false" data-mobile-toggle>☰</button>
       </div>
     </div>
-  </div></div></section>
+    <div class="mobile-panel" data-mobile-panel>
+      <div class="mobile-links">
+        <a class="btn btn-outline" href="index.html">Home</a>
+        <a class="btn btn-outline" href="products.html">Products</a>
+        <a class="btn btn-outline" href="brands.html">Brands</a>
+        <a class="btn btn-outline" href="contact.html">Contact</a>
+        <a class="btn btn-accent" href="request-account.html">Request Account</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-shell login-hero-shell">
+        <div>
+          <div class="kicker-row">Customer access</div>
+          <h1>Account login for pricing, product access, and order visibility.</h1>
+          <p>A showcase of how approved customers can sign in and view private product pricing, quick actions, and account activity in one clean portal.</p>
+        </div>
+        <img src="assets/img/logo-mku-mks.png" alt="MKU and MKS logo" class="login-hero-logo">
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section tight" data-login-shell>
+    <div class="container">
+      <div class="portal-login-grid" data-auth-stage="loggedout">
+        <form class="login-card auth-card" autocomplete="off">
+          <img src="assets/img/logo-mku-mks.png" alt="MKU and MKS logo" class="portal-brand-lockup">
+          <div class="section-head" style="margin-bottom:18px;">
+            <span class="eyebrow">Customer Login</span>
+            <h2 class="section-title portal-title">Sign in to your business account</h2>
+          </div>
+          <div class="auth-fields">
+            <div class="field-full">
+              <label for="login-email">Business email</label>
+              <input id="login-email" type="email" value="purchasing@balihospitalitygroup.com">
+            </div>
+            <div class="field-full">
+              <label for="login-password">Password</label>
+              <input id="login-password" type="password" value="••••••••••">
+            </div>
+            <div class="auth-row">
+              <label class="check-row"><input type="checkbox" checked> Keep me signed in</label>
+              <a href="request-account.html" class="text-link">Need an account</a>
+            </div>
+            <button class="btn btn-primary full" type="button" data-demo-login>Sign In</button>
+            <div class="form-status" data-login-status></div>
+          </div>
+        </form>
+
+        <div class="stack-18">
+          <article class="portal-preview-card">
+            <span class="eyebrow">What customers can access</span>
+            <h3>Private pricing and commercial account tools</h3>
+            <ul class="list-check">
+              <li>Company-based pricing visibility</li>
+              <li>Quick access to MKU and MKS product ranges</li>
+              <li>Recent orders, invoices, and saved products</li>
+            </ul>
+          </article>
+          <article class="portal-preview-card">
+            <span class="eyebrow">Representative account</span>
+            <h3>Bali Hospitality Group</h3>
+            <div class="feature-meta">
+              <span class="meta-pill">Approved account</span>
+              <span class="meta-pill">Pricing enabled</span>
+              <span class="meta-pill">Multi-company access</span>
+            </div>
+            <p class="small-copy" style="margin-top:14px;">Use the sign-in button to reveal the dashboard preview below.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section tight hidden" data-auth-stage="loggedin">
+    <div class="container stack-24">
+      <div class="portal-topbar dashboard-topbar">
+        <div>
+          <div class="kicker-row">Signed in</div>
+          <h2 class="catalog-title" style="margin-top:10px;">Welcome back, Bali Hospitality Group</h2>
+          <p class="small-copy">Approved account · Private pricing enabled · Sales contact assigned</p>
+        </div>
+        <div class="inline-tags">
+          <span class="meta-pill">MKU access</span>
+          <span class="meta-pill">MKS access</span>
+          <span class="meta-pill">Priority account</span>
+        </div>
+      </div>
+
+      <div class="portal-stat-grid dashboard-stat-grid">
+        <article class="portal-stat"><strong>27</strong><span>Saved products</span></article>
+        <article class="portal-stat"><strong>06</strong><span>Recent orders</span></article>
+        <article class="portal-stat"><strong>02</strong><span>Open inquiries</span></article>
+        <article class="portal-stat"><strong>1</strong><span>Assigned sales contact</span></article>
+      </div>
+
+      <div class="portal-grid dashboard-grid">
+        <div class="price-shell">
+          <div class="price-tabs" id="price-tabs">
+            <button type="button" class="active" data-company="mku">MKU pricing</button>
+            <button type="button" data-company="mks">MKS pricing</button>
+          </div>
+          <div id="price-panel-host"></div>
+          <p class="small-copy" id="pricing-note"></p>
+        </div>
+        <div class="stack-18 dashboard-side">
+          <article class="portal-list-card">
+            <h3>Recent activity</h3>
+            <ul class="list-check">
+              <li>PO MKU-24018 · Pending confirmation</li>
+              <li>MKS flour replenishment · Ready for reorder</li>
+              <li>Updated beverage quote · Sent to purchasing</li>
+            </ul>
+          </article>
+          <article class="portal-list-card">
+            <h3>Quick actions</h3>
+            <ul class="list-check">
+              <li>Download requested price list</li>
+              <li>Send product inquiry to sales</li>
+              <li>Review saved items and reorder shortlist</li>
+            </ul>
+          </article>
+          <article class="portal-list-card">
+            <h3>Account contact</h3>
+            <p>Commercial email: order@ptmku.com</p>
+            <p>Phone: +62 361 4485615</p>
+            <p>WhatsApp: +62 822-3661-7866</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-row"><p>© <span data-year></span> MKU & MKS. Static website trial built for GitHub hosting.</p><div class="footer-links"><a href="about.html">About</a><a href="products.html">Products</a><a href="brands.html">Brands</a><a href="industries.html">Industries</a><a href="logistics.html">Logistics</a><a href="contact.html">Contact</a></div></div></div></footer>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-row">
+      <p>© <span data-year></span> MKU & MKS. Premium food & beverage distribution group.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="brands.html">Brands</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site-data.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.MKU_DATA) return;
+    const tabs = document.querySelectorAll('#price-tabs button');
+    const host = document.getElementById('price-panel-host');
+    document.getElementById('pricing-note').textContent = window.MKU_DATA.pricingNote;
+
+    const renderTable = (companyKey) => {
+      const rows = window.MKU_DATA.portalPrices[companyKey];
+      return `
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Product</th>
+              <th>Pack</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(row => `
+              <tr>
+                <td>${row.category}</td>
+                <td>${row.product}</td>
+                <td>${row.pack}</td>
+                <td class="price-highlight">${row.price}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    };
+
+    host.innerHTML = `
+      <div class="catalog-panel active" data-price-panel="mku">${renderTable('mku')}</div>
+      <div class="catalog-panel" data-price-panel="mks">${renderTable('mks')}</div>
+    `;
+
+    tabs.forEach(button => {
+      button.addEventListener('click', () => {
+        const company = button.dataset.company;
+        tabs.forEach(tab => tab.classList.toggle('active', tab === button));
+        document.querySelectorAll('[data-price-panel]').forEach(panel => {
+          panel.classList.toggle('active', panel.dataset.pricePanel === company);
+        });
+      });
+    });
+  });
+</script>
 </body>
 </html>
