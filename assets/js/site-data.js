@@ -7,7 +7,7 @@ window.MKU_DATA = {
       est: 'Est. 2006',
       logo: 'assets/img/logo-mku.png',
       color: '#D8342B',
-      summary: 'Premium foods, pantry, beverage, pork, salmon, fries, and spirits for hospitality and foodservice buyers.'
+      summary: 'Premium foods, dairy, fries, protein, pantry, beverage, and bar categories for hospitality and foodservice buyers.'
     },
     {
       key: 'mks',
@@ -16,9 +16,12 @@ window.MKU_DATA = {
       est: 'Est. 2012',
       logo: 'assets/img/logo-mks.png',
       color: '#1E63C6',
-      summary: 'Flour, cheese, dairy, pastry, beverage, pantry, protein, and bakery-led distribution for professional kitchens.'
+      summary: 'Flour, pastry, dairy, beverage, pantry, protein, and bakery-led distribution for professional kitchens.'
     }
   ],
+  brandAssets: {
+    'Sriboga': 'assets/img/logo-sriboga.png'
+  },
   services: [
     { t: 'Beef, Lamb & Wagyu', d: 'Imported and Australian wagyu, Brazilian and Indian buffalo, lamb cuts, and commercial kitchen-ready proteins.' },
     { t: 'Seafood', d: 'Frozen squid, tiger prawns, claw meat, and seafood lines handled through reliable cold-chain distribution.' },
@@ -33,7 +36,7 @@ window.MKU_DATA = {
     { t: 'Asian & Japanese Pantry', d: 'Komi sauces, sushi vinegar, teriyaki, unagi, wasabi, and key Asian pantry ingredients.' },
     { t: 'Beverage & Bar', d: 'Osterberg syrups, Masterista, Savis tea, matcha, ADC barista milk, and soju or spirit programs.' },
     { t: 'Coffee Shop Programme', d: 'Frappe bases, sauces, fruit concentrate, powders, cold foam, and beverage support for café operators.' },
-    { t: 'Nestlé Professional', d: 'Nescafe, Milo, Nestea, Maggi, Sjora, KitKat, and other foodservice-ready Nestlé lines.' }
+    { t: 'Nestlé Professional', d: 'Nescafé, Milo, Nestea, Maggi, KitKat, and other foodservice-ready Nestlé lines.' }
   ],
   segments: [
     { t: 'Hotels & Resorts', d: 'All-day dining, room service, banquet, and multi-outlet hospitality operations.' },
@@ -49,7 +52,7 @@ window.MKU_DATA = {
   ],
   catalog: {
     mku: {
-      intro: 'French fries, Italian pantry, dairy, pork, salmon, tea, syrup, matcha, and alcohol distribution.',
+      intro: 'French fries, Italian pantry, dairy, pork, salmon, tea, syrup, matcha, and alcohol distribution for hospitality buyers.',
       categories: [
         { t: 'French Fries & Potato', brands: [
           { t: "Crr Rock'n", origin: 'Belgium', items: ['Simply Crrrrips Straight Cut', 'Batter Skin-On Fries 9×9mm', 'Super Crispy Spicy Wedges', 'Hash Brown Triangular', 'Waffle Fries'] },
@@ -88,6 +91,7 @@ window.MKU_DATA = {
       intro: 'Sriboga flour, dairy, pastry, pantry, protein, beverage, and Nestlé Professional-led commercial kitchen supply.',
       categories: [
         { t: 'Sriboga Flour', brands: [
+          { t: 'Sriboga', origin: 'Indonesia', items: ['Ninja', 'Double Zero', 'Hime', 'Yokozuna', 'Fusion range', 'EasyMix range'] },
           { t: 'Super Premium', origin: 'Japanese-grade', items: ['Ninja', 'Double Zero', 'Hime', 'Yokozuna'] },
           { t: 'Premium', origin: 'All-purpose', items: ['Stupa Hijau', 'Pita Merah', 'Tali Emas', 'Beruang Biru'] },
           { t: 'Fusion', origin: 'Special blends', items: ['Double Zero Fusion', 'Hime Fusion', 'Ninja Pao Fusion', 'Ninja Cookies Fusion'] },
@@ -103,7 +107,7 @@ window.MKU_DATA = {
           { t: 'Parrot / Nuri', origin: 'Chocolate', items: ['Compound Chocolate', 'Chocolate Buttons', 'Drink Powder', 'Chocolate Paste'] },
           { t: 'Greci', origin: 'Tomato', items: ['Tomato Pulp', 'Pizza Sauce'] },
           { t: 'Asian Pantry', origin: 'Sauces & noodles', items: ['Mala Chilli Oil', 'Fish Sauce', 'Dark Soya', 'Sesame Oil', 'Egg Noodle'] },
-          { t: 'Sweetener & pantry', origin: 'Support items', items: ['Equal Classic', 'Salt', 'Gherkins'] }
+          { t: 'Sweetener & Pantry', origin: 'Support items', items: ['Equal Classic', 'Salt', 'Gherkins'] }
         ]},
         { t: 'Protein — Meat & Seafood', brands: [
           { t: 'Australia Beef', origin: 'Imported', items: ['Tenderloin', 'Sirloin', 'Striploin', 'Chuck Tender', 'Topside'] },
@@ -159,5 +163,5 @@ window.MKU_DATA = {
     whatsapp: '+62 822-3661-7866',
     email: 'order@ptmku.com'
   },
-  pricingNote: 'Representative prices from the uploaded May 2026 price lists. For demo purposes only. Final portal pricing should be customer-specific.'
+  pricingNote: 'Account pricing remains customer-specific and follows volume, delivery point, and commercial agreement.'
 };

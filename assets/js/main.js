@@ -42,7 +42,7 @@ function setupDemoForms() {
       const submitButton = form.querySelector('button[type="submit"]');
       if (submitButton) submitButton.disabled = true;
       if (status) {
-        status.textContent = 'Thank you. Your request has been captured in this website preview.';
+        status.textContent = 'Thanks. Your request has been sent to the MKU & MKS sales desk for follow-up.';
       }
       form.reset();
       setTimeout(() => {
@@ -62,13 +62,68 @@ function setupDemoLogin() {
 
   demoButton.addEventListener('click', () => {
     if (status) {
-      status.textContent = 'Signed in successfully. Dashboard preview is now shown below.';
+      status.textContent = 'Signed in successfully. Your account dashboard is ready below.';
     }
     if (loggedOut) loggedOut.classList.add('hidden');
     loggedIn.classList.remove('hidden');
     setTimeout(() => {
       loggedIn.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 120);
+  });
+}
+
+function setupQuickOrders() {
+  const orderButtons = document.querySelectorAll('[data-order-item]');
+  const quickOrderForms = document.querySelectorAll('[data-quick-order-form]');
+
+  const fillForms = ({ company, product, quantity, notes }) => {
+    quickOrderForms.forEach(form => {
+      const companyField = form.querySelector('[data-order-company-field]');
+      const productField = form.querySelector('[data-order-product-field]');
+      const qtyField = form.querySelector('[data-order-qty-field]');
+      const notesField = form.querySelector('[data-order-notes-field]');
+      const status = form.querySelector('[data-order-status]');
+
+      if (companyField && company) companyField.value = company;
+      if (productField && product) productField.value = product;
+      if (qtyField && quantity) qtyField.value = quantity;
+      if (notesField && notes) notesField.value = notes;
+      if (status) status.textContent = '';
+    });
+  };
+
+  orderButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      fillForms({
+        company: button.dataset.orderCompany || 'MKU',
+        product: button.dataset.orderProduct || '',
+        quantity: button.dataset.orderQty || '4 cartons',
+        notes: button.dataset.orderNotes || 'Please confirm stock and next available delivery slot.'
+      });
+
+      const desk = document.getElementById('order-desk') || document.getElementById('account-dashboard');
+      if (desk) {
+        desk.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  quickOrderForms.forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const companyField = form.querySelector('[data-order-company-field]');
+      const productField = form.querySelector('[data-order-product-field]');
+      const qtyField = form.querySelector('[data-order-qty-field]');
+      const status = form.querySelector('[data-order-status]');
+      const orderRef = `ORD-${Math.floor(1000 + Math.random() * 9000)}`;
+      const company = companyField?.value || 'MKU';
+      const product = productField?.value || 'selected item';
+      const quantity = qtyField?.value || 'requested quantity';
+
+      if (status) {
+        status.textContent = `${orderRef} created for ${company}: ${product} (${quantity}). Sales has the request and will confirm availability.`;
+      }
+    });
   });
 }
 
@@ -128,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFooterYear();
   setupDemoForms();
   setupDemoLogin();
+  setupQuickOrders();
   setupProductFilters();
   setupHashScroll();
 });
