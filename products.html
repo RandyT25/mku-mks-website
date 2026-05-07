@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | MKU & MKS</title>
-  <meta name="description" content="Updated MKU and MKS product portfolio, categories, and brand ranges based on the newer project structure and latest uploaded price lists.">
+  <meta name="description" content="Explore the MKU and MKS product portfolio, review key supplier lines, and send a working order request directly from the website.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -37,9 +37,51 @@
   <section class="page-hero">
     <div class="container">
       <div class="page-hero-shell">
-        <div class="kicker-row">Updated portfolio</div>
-        <h1>Products and brands aligned to the current portfolio.</h1>
-        <p>This page follows the updated MKU and MKS portfolio structure and reflects the current grouping used across the latest product references.</p>
+        <div class="kicker-row">Portfolio</div>
+        <h1>Products organised for buyers who need fast decisions.</h1>
+        <p>The portfolio page now connects product discovery with a working order request. Buyers can review the range, jump into account pricing, or submit a quick order from the same page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section tight" id="order-desk">
+    <div class="container">
+      <div class="quick-order-grid">
+        <form class="form-card quick-order-shell" data-quick-order-form>
+          <div class="section-head" style="margin-bottom:22px;">
+            <span class="eyebrow">Quick order desk</span>
+            <h2 class="section-title" style="font-size:32px;">Build a sample order request</h2>
+            <p class="section-copy">Use the portfolio buttons below to prefill this form, then submit the order request and the page will respond immediately.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="order-account">Account name</label><input id="order-account" value="Bali Hospitality Group" required></div>
+            <div class="field"><label for="order-company">Supply company</label><select id="order-company" data-order-company-field><option value="MKU">MKU</option><option value="MKS">MKS</option></select></div>
+            <div class="field-full"><label for="order-product">Selected product</label><input id="order-product" data-order-product-field value="Crr Rock'n Simply Crrrrips Straight Cut Fries" required></div>
+            <div class="field"><label for="order-qty">Requested quantity</label><input id="order-qty" data-order-qty-field value="8 cartons" required></div>
+            <div class="field"><label for="order-delivery">Delivery window</label><select id="order-delivery"><option>Next delivery run</option><option>Within 24 hours</option><option>Within 48 hours</option><option>Schedule for next week</option></select></div>
+            <div class="field-full"><label for="order-notes">Special notes</label><textarea id="order-notes" data-order-notes-field>Need delivery to Jimbaran property receiving dock.</textarea></div>
+            <div class="field-full"><button class="btn btn-primary full" type="submit">Submit Order Request</button><div class="form-status" data-order-status></div></div>
+          </div>
+        </form>
+        <div class="stack-18">
+          <article class="note-box">
+            <span class="eyebrow">What works here</span>
+            <h3>Functional order flow</h3>
+            <ul class="list-check">
+              <li>Portfolio cards prefill the order form</li>
+              <li>Account pricing is one click away</li>
+              <li>Sales, contact, and order pathways are connected</li>
+            </ul>
+          </article>
+          <article class="portal-list-card">
+            <h3>Need pricing first</h3>
+            <p>Open the customer portal to review account-level pricing, saved products, and recent order history before confirming replenishment.</p>
+            <div class="hero-actions" style="margin-top:18px;">
+              <a class="btn btn-outline" href="login.html">Open Customer Login</a>
+              <a class="btn btn-accent" href="contact.html">Send Inquiry</a>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -58,18 +100,18 @@
     <div class="container">
       <div class="portal-panel">
         <div>
-          <span class="eyebrow" style="color:#fff;">Pricing preview</span>
-          <h2 class="section-title" style="color:#fff;max-width:12ch;">Private pricing is available through customer login.</h2>
-          <p>The product page stays public-facing, while pricing remains available through the customer portal for approved business accounts.</p>
+          <span class="eyebrow" style="color:#fff;">Ordering flow</span>
+          <h2 class="section-title" style="color:#fff;max-width:13ch;">Review the range, check pricing, then place the request.</h2>
+          <p>This product page is now designed as a sales tool: visitors can understand the category structure publicly while approved customers continue into the portal for pricing and reorder activity.</p>
           <ul class="portal-list">
-            <li>Representative MKU and MKS prices already loaded</li>
-            <li>Private-pricing direction instead of public open pricing</li>
-            <li>Dedicated account view for approved customers</li>
+            <li>Clickable portfolio cards with order shortcuts</li>
+            <li>Private pricing table through the customer portal</li>
+            <li>Account request and contact paths always visible</li>
           </ul>
         </div>
         <div class="portal-actions">
-          <a class="btn btn-light" href="login.html">Open Customer Login</a>
-          <a class="btn btn-accent" href="request-account.html">Request Account</a>
+          <a class="btn btn-light" href="#order-desk">Go to Order Desk</a>
+          <a class="btn btn-accent" href="login.html">Open Customer Login</a>
         </div>
       </div>
     </div>
@@ -85,6 +127,15 @@
     if (!window.MKU_DATA) return;
     const tabs = document.querySelectorAll('#catalog-tabs button');
     const panels = document.getElementById('catalog-panels');
+    const logoMap = window.MKU_DATA.brandAssets || {};
+
+    const renderLogo = (brand) => {
+      const logo = logoMap[brand.t];
+      if (logo) {
+        return `<div class="brand-logo brand-logo--image"><img src="${logo}" alt="${brand.t} logo"></div>`;
+      }
+      return `<div class="brand-logo">${brand.t.slice(0,2).toUpperCase()}</div>`;
+    };
 
     const renderPanel = (companyKey) => {
       const company = window.MKU_DATA.companies.find(item => item.key === companyKey);
@@ -108,16 +159,24 @@
                 <span class="small-copy">${category.brands.length} ranges</span>
               </div>
               <div class="brand-grid">
-                ${category.brands.map(brand => `
-                  <article class="brand-card">
-                    <div class="brand-logo">${brand.t.slice(0,2).toUpperCase()}</div>
-                    <h3>${brand.t}</h3>
-                    <div class="brand-origin">${brand.origin}</div>
-                    <ul>
-                      ${brand.items.slice(0, 6).map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                  </article>
-                `).join('')}
+                ${category.brands.map(brand => {
+                  const featuredItem = brand.items[0];
+                  return `
+                    <article class="brand-card order-card">
+                      ${renderLogo(brand)}
+                      <h3>${brand.t}</h3>
+                      <div class="brand-origin">${brand.origin}</div>
+                      <p class="small-copy">Best fit for ${category.t.toLowerCase()} sourcing and repeat purchasing.</p>
+                      <ul>
+                        ${brand.items.slice(0, 5).map(item => `<li>${item}</li>`).join('')}
+                      </ul>
+                      <div class="order-card-actions">
+                        <button type="button" class="btn btn-primary small-btn" data-order-item data-order-company="${company.short}" data-order-product="${featuredItem}">Add top item</button>
+                        <a class="btn btn-outline small-btn" href="login.html">View pricing</a>
+                      </div>
+                    </article>
+                  `;
+                }).join('')}
               </div>
             </div>
           `).join('')}

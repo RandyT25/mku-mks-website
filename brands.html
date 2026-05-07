@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brands | MKU & MKS</title>
-  <meta name="description" content="Updated brand overview for MKU and MKS using the newer project structure and latest uploaded portfolio references.">
+  <meta name="description" content="Review key supplier brands across MKU and MKS, including an actual partner logo wall and category-led brand highlights.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,8 +13,39 @@
 <body>
 <header class="site-header"><div class="container"><div class="header-row"><a class="brand" href="index.html"><span class="brand-mark"></span><span class="brand-text"><strong>MKU & MKS</strong><span>Food & beverage distribution group</span></span></a><div class="nav-wrap"><nav class="site-nav"><a href="index.html" data-nav-link>Home</a><a href="about.html" data-nav-link>About</a><a href="products.html" data-nav-link>Products</a><a href="brands.html" data-nav-link>Brands</a><a href="industries.html" data-nav-link>Industries</a><a href="logistics.html" data-nav-link>Logistics</a><a href="contact.html" data-nav-link>Contact</a></nav><div class="header-ctas"><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div><button class="mobile-toggle" type="button" aria-expanded="false" data-mobile-toggle>☰</button></div></div><div class="mobile-panel" data-mobile-panel><div class="mobile-links"><a class="btn btn-outline" href="index.html">Home</a><a class="btn btn-outline" href="about.html">About</a><a class="btn btn-outline" href="products.html">Products</a><a class="btn btn-outline" href="brands.html">Brands</a><a class="btn btn-outline" href="industries.html">Industries</a><a class="btn btn-outline" href="logistics.html">Logistics</a><a class="btn btn-outline" href="contact.html">Contact</a><a class="btn btn-outline" href="login.html">Customer Login</a><a class="btn btn-accent" href="request-account.html">Request Account</a></div></div></div></header>
 <main>
-  <section class="page-hero"><div class="container"><div class="page-hero-shell"><div class="kicker-row">Brand overview</div><h1>Updated brands that better match the current business offer.</h1><p>This page is refreshed from the newer project structure so the brand story feels more complete and closer to the latest product range.</p></div></div></section>
-  <section class="page-section tight"><div class="container"><div class="brand-grid" id="brand-overview-grid"></div></div></section>
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-shell">
+        <div class="kicker-row">Brand overview</div>
+        <h1>Brand presentation built around real supplier identities.</h1>
+        <p>The brand page now opens with an actual partner logo wall and then breaks the portfolio down into the categories a buyer cares about most.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section tight">
+    <div class="container">
+      <div class="brand-wall-shell">
+        <div>
+          <span class="eyebrow">Partner logo wall</span>
+          <h2 class="section-title" style="font-size:32px;">Recognisable brands already linked to the sales story.</h2>
+          <p class="section-copy">The visual now uses the uploaded partner logo sheet instead of relying on lookalike product graphics, so the page feels closer to a real supplier presentation.</p>
+        </div>
+        <img src="assets/img/brand-wall.png" alt="Partner brand wall" class="brand-wall-image">
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Brand groups</span>
+        <h2 class="section-title">Suppliers organised by commercial use case.</h2>
+        <p class="section-copy">Each card below links the supplier line to a practical buying context instead of leaving the page as a generic logo gallery.</p>
+      </div>
+      <div class="brand-grid" id="brand-overview-grid"></div>
+    </div>
+  </section>
 </main>
 <footer class="site-footer"><div class="container"><div class="footer-row"><p>© <span data-year></span> MKU & MKS. Premium food & beverage distribution group.</p><div class="footer-links"><a href="about.html">About</a><a href="products.html">Products</a><a href="brands.html">Brands</a><a href="industries.html">Industries</a><a href="logistics.html">Logistics</a><a href="contact.html">Contact</a></div></div></div></footer>
 <script src="assets/js/site-data.js"></script>
@@ -23,22 +54,54 @@
   document.addEventListener('DOMContentLoaded', () => {
     if (!window.MKU_DATA) return;
     const host = document.getElementById('brand-overview-grid');
-    const entries = [];
-    Object.entries(window.MKU_DATA.catalog).forEach(([companyKey, companyData]) => {
-      companyData.categories.forEach(category => {
-        category.brands.forEach(brand => {
-          entries.push({ companyKey, category: category.t, ...brand });
-        });
-      });
-    });
-    host.innerHTML = entries.map(brand => `
-      <article class="brand-card">
-        <div class="brand-logo">${brand.t.slice(0,2).toUpperCase()}</div>
-        <h3>${brand.t}</h3>
-        <p>${brand.category} · ${brand.companyKey.toUpperCase()}</p>
-        <ul>
-          ${brand.items.slice(0, 5).map(item => `<li>${item}</li>`).join('')}
-        </ul>
+    const groups = [
+      {
+        title: 'Bakery, pastry, and flour',
+        summary: 'Built around Sriboga flour, EasyMix solutions, dairy, and pastry support for bakery and pizza operations.',
+        tags: ['Sriboga', 'EasyMix', 'ADC'],
+        cta: 'products.html'
+      },
+      {
+        title: 'Italian pantry and premium dairy',
+        summary: 'Anchored by Armando, O’Sole, Bottegaio Umbro, Warnambool, Bergold, and Pristine for restaurant kitchens and hotel production.',
+        tags: ['Armando', 'O’Sole', 'Warnambool'],
+        cta: 'products.html#order-desk'
+      },
+      {
+        title: 'Beverage, café, and bar programme',
+        summary: 'Includes Savis Tea, Masterista, Expecta, Milo, Nestea, and Nescafé lines suited for cafés, bars, and multi-outlet hospitality groups.',
+        tags: ['Savis Tea', 'Masterista', 'Nescafé'],
+        cta: 'login.html'
+      },
+      {
+        title: 'Protein and cold-chain supply',
+        summary: 'From Australian beef and Wagyu to salmon, pork, seafood, and processed meats for chefs who need consistent replenishment.',
+        tags: ['Australia Beef', 'Pardoo', 'Salmon'],
+        cta: 'contact.html'
+      }
+    ];
+
+    const logoMap = window.MKU_DATA.brandAssets || {};
+    const renderHeroLogo = (brandName) => {
+      const logo = logoMap[brandName];
+      if (logo) {
+        return `<div class="brand-logo brand-logo--image"><img src="${logo}" alt="${brandName} logo"></div>`;
+      }
+      return `<div class="brand-logo">${brandName.slice(0,2).toUpperCase()}</div>`;
+    };
+
+    host.innerHTML = groups.map(group => `
+      <article class="brand-card brand-story-card">
+        ${renderHeroLogo(group.tags[0])}
+        <h3>${group.title}</h3>
+        <p>${group.summary}</p>
+        <div class="inline-tags brand-chip-grid">
+          ${group.tags.map(tag => `<span class="meta-pill">${tag}</span>`).join('')}
+        </div>
+        <div class="order-card-actions">
+          <a class="btn btn-primary small-btn" href="${group.cta}">Explore this group</a>
+          <a class="btn btn-outline small-btn" href="products.html#order-desk">Build order</a>
+        </div>
       </article>
     `).join('');
   });
