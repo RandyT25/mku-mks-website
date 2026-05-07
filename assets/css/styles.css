@@ -1473,3 +1473,211 @@ button { cursor: pointer; }
   .portal-title { max-width: none; }
   .auth-row { align-items: flex-start; }
 }
+
+/* --- CEO showcase refinements --- */
+.showcase-head--stack {
+  display: block;
+}
+.showcase-head--stack .kicker-row {
+  margin-bottom: 12px;
+}
+.company-row-grid {
+  display: grid;
+  gap: 14px;
+}
+.company-row-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.company-row-copy {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.company-row-copy strong {
+  display: block;
+  font-family: var(--sans);
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.company-row-copy span {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.company-row-meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.company-row-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+.brand-logo--image {
+  padding: 10px;
+  background: #fff;
+}
+.brand-logo--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.brand-wall-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.brand-wall-image {
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.brand-story-card {
+  display: grid;
+  gap: 14px;
+}
+.brand-chip-grid {
+  gap: 10px;
+}
+.quick-order-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+.quick-order-shell {
+  padding: 30px;
+}
+.quick-order-form {
+  display: grid;
+  gap: 16px;
+}
+.compact-form-grid {
+  gap: 14px;
+}
+.order-card {
+  display: grid;
+  gap: 12px;
+}
+.order-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+.small-btn {
+  padding: 12px 16px;
+  font-size: 13px;
+}
+.price-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+.price-table thead th {
+  padding: 0 16px 8px;
+}
+.price-table tbody td {
+  padding: 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.price-table tbody td:first-child {
+  border-left: 1px solid var(--line);
+  border-radius: 16px 0 0 16px;
+}
+.price-table tbody td:last-child {
+  border-right: 1px solid var(--line);
+  border-radius: 0 16px 16px 0;
+}
+.dashboard-company-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.account-company-card {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 18px;
+  padding: 18px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.account-company-card.active {
+  border-color: rgba(30, 99, 198, 0.35);
+  box-shadow: 0 20px 60px rgba(30, 99, 198, 0.12);
+}
+.account-company-card img {
+  width: 92px;
+  height: 44px;
+  object-fit: contain;
+}
+.account-company-card strong {
+  display: block;
+  font-family: var(--sans);
+  margin-bottom: 6px;
+  font-size: 17px;
+}
+.account-company-card span {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.open-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.open-orders-table th,
+.open-orders-table td {
+  padding: 12px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(216, 52, 43, 0.1);
+  color: var(--mku);
+  font-size: 12px;
+  font-weight: 700;
+}
+.status-pill.ok {
+  background: rgba(30, 166, 114, 0.12);
+  color: var(--success);
+}
+.quick-order-card {
+  padding-bottom: 28px;
+}
+@media (max-width: 1100px) {
+  .brand-wall-shell,
+  .quick-order-grid,
+  .dashboard-company-strip {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 860px) {
+  .company-row-copy,
+  .account-company-card {
+    grid-template-columns: 1fr;
+  }
+}
